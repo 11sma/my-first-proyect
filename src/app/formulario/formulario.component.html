@@ -2,30 +2,30 @@
     <p>Nombre:
         <input type="text" formControlName="nombre" required>
         <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">
-            (El nombre no puede quedar vacío)
+            (¡El nombre no puede quedar vacío!)
         </span>
         <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['minLength']">
-            (Debe tener mínimo 10 carácteres)
+            (¡Debe tener mínimo 10 carácteres!)
         </span>
     </p>
 
     <p>Mail:
         <input type="text" formControlName="mail" required>
         <span *ngIf="this.formularioContacto.get('mail')?.errors?.['required']">
-            (El mail no puede quedar vacío)
+            (¡El mail no puede quedar vacío!)
         </span>
         <span *ngIf="this.formularioContacto.get('mail')?.errors?.['email']">
-            (El mail no es válido)
+            (¡El mail no es válido!)
         </span>
     </p>
 
     <p>Mensaje:
         <textarea rows="10" cols="70" formControlName="mensaje" required></textarea>
         <span *ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">
-            (El mensaje no puede quedar vacío)
+            (¡El mensaje no puede quedar vacío!)
         </span>
         <span *ngIf="this.formularioContacto.get('mensaje')?.errors?.['maxLength']">
-            (Debe tener máximo 500 carácteres)
+            (¡Debe tener máximo 500 carácteres!)
         </span>
     </p>
     <button type="submit">Confirmar</button>
