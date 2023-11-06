@@ -23,9 +23,9 @@ export class FormularioComponent {
 
   submit() {
     if(this.formularioContacto.valid)
-      this.resultado = 'Todos los datos son válidos';
+      this.resultado = '¡Todos los datos son válidos!';
     else 
-      this.resultado = 'Hay datos inválidos en el formulario';
+      this.resultado = '¡Hay datos inválidos en el formulario!';
   }
 
 }
