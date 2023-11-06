@@ -48,7 +48,7 @@ export class CalculadoraDesgravacioComponent {
     }
 
     if (iAutonom > 5750) {
-      this.missatge = 'El Import autònom no pot ser superior a 8500';
+      this.missatge = 'El Import autònom no pot ser superior a 5750';
       this.resultado = 0;
       return false;
     }
