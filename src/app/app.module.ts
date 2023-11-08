@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormularioComponent } from './formulario/formulario.component';
+import { CalculadoraDesgravacioComponent } from './calculadora-desgravacio/calculadora-desgravacio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent
+    FormularioComponent,
+    CalculadoraDesgravacioComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +20,6 @@ import { FormularioComponent } from './formulario/formulario.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [FormularioComponent]
+  bootstrap: [CalculadoraDesgravacioComponent]
 })
 export class AppModule { }
