@@ -25,13 +25,14 @@ export class CalculadoraDesgravacioComponent {
   submit() {
     console.log(this.calculadoraDesgravacio.value.importAutonom);
     
-    let valorPersona = this.calculadoraDesgravacio.value.importPersona == null? 0: this.calculadoraDesgravacio.value.importPersona;
-    let valorEmpresa = this.calculadoraDesgravacio.value.importEmpresa == null? 0: this.calculadoraDesgravacio.value.importEmpresa;
-    let valorAutonom = this.calculadoraDesgravacio.value.importAutonom == null? 0: this.calculadoraDesgravacio.value.importAutonom;
-    
+    let valorPersona: number = this.calculadoraDesgravacio.value.importPersona == null? 0: this.calculadoraDesgravacio.value.importPersona;
+    let valorEmpresa: number = this.calculadoraDesgravacio.value.importEmpresa == null? 0: this.calculadoraDesgravacio.value.importEmpresa;
+    let valorAutonom: number = this.calculadoraDesgravacio.value.importAutonom == null? 0: this.calculadoraDesgravacio.value.importAutonom;
+    let baseImponible: number = this.calculadoraDesgravacio.value.baseImponible == null? 0: this.calculadoraDesgravacio.value.baseImponible;
+
     console.log(valorPersona + valorEmpresa + valorAutonom)
     if(this.checkValues(valorPersona, valorEmpresa, valorAutonom))
-      this.calculate(60000, valorPersona + valorEmpresa + valorAutonom);
+      this.calculate(baseImponible, valorPersona + valorEmpresa + valorAutonom);
   }
 
   checkValues(iPersona: number, iEmpresa: number, iAutonom: number){
