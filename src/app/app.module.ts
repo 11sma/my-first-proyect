@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormularioComponent } from './formulario/formulario.component';
 import { CalculadoraDesgravacioComponent } from './calculadora-desgravacio/calculadora-desgravacio.component';
+import { CalculadoraDesgravacioService } from './calculadora-desgravacio.service';
+
+import { HttpClientModule } from  '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,10 @@ import { CalculadoraDesgravacioComponent } from './calculadora-desgravacio/calcu
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CalculadoraDesgravacioService],
   bootstrap: [CalculadoraDesgravacioComponent]
 })
 export class AppModule { }
